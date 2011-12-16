@@ -21,7 +21,7 @@ export PROJECTS=/var/www
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(extract git git-flow gem petemcw yum)
+plugins=(extract git gem petemcw yum)
 
 source $ZSH/oh-my-zsh.sh
 
