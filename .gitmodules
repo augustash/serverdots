@@ -42,4 +42,4 @@
 	url = https://github.com/wgibbs/vim-irblack.git
 [submodule "zsh/oh-my-zsh.symlink"]
 	path = zsh/oh-my-zsh.symlink
-	url = https://github.com/petemcw/oh-my-zsh.git
+	url = https://github.com/augustash/oh-my-zsh.git
