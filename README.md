@@ -10,7 +10,10 @@ much easier. [Read his post on the subject](http://zachholman.com/2010/08/dotfil
 
 - `git clone git://github.com/augustash/serverdots.git ~/.dotfiles`
 - `cd ~/.dotfiles`
+- `git submodule init`
+- `git submodule update`
 - `rake install`
+- `chsh -s /bin/zsh`
 
 The install rake task will symlink the appropriate files in `.dotfiles` to 
 your home directory. Everything is configured and tweaked within `~/.dotfiles`.
