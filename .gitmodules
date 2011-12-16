@@ -28,3 +28,15 @@
 [submodule "vim/vim.symlink/bundle/vim-vividchalk"]
 	path = vim/vim.symlink/bundle/vim-vividchalk
 	url = https://github.com/tpope/vim-vividchalk.git
+[submodule "vim/vim.symlink/bundle/vim-coffee-script"]
+	path = vim/vim.symlink/bundle/vim-coffee-script
+	url = https://github.com/kchmck/vim-coffee-script.git
+[submodule "vim/vim.symlink/bundle/snipmate"]
+	path = vim/vim.symlink/bundle/snipmate
+	url = https://github.com/msanders/snipmate.vim.git
+[submodule "vim/vim.symlink/bundle/gist-vim"]
+	path = vim/vim.symlink/bundle/gist-vim
+	url = https://github.com/mattn/gist-vim.git
+[submodule "vim/vim.symlink/bundle/vim-irblack"]
+	path = vim/vim.symlink/bundle/vim-irblack
+	url = https://github.com/wgibbs/vim-irblack.git
