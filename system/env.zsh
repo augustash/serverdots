@@ -1,3 +1,3 @@
 export EDITOR='vim'
 
-export TZ="/usr/share/zoneinfo/US/Central"
+export TZ="/usr/share/zoneinfo/UTC"

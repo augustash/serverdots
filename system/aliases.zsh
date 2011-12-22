@@ -1,3 +1,4 @@
+# colorful listing
 alias ls="ls -F --color"
 alias l="ls -lAh --color"
 alias ll="ls -lh --color"
