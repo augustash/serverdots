@@ -1,6 +1,7 @@
 # Used from Zach Holman's repository
 # https://github.com/holman/dotfiles
 require 'rake'
+require 'erb'
 
 desc "Hook our dotfiles into system-standard positions."
 task :install do
@@ -34,7 +35,7 @@ task :install do
     end
     if file =~ /.erb$/
       File.open(File.join(ENV["HOME"], ".#{file.sub('.erb', '')}"), 'w') do |new_file|
-        new_file.write ERB.new(File.read(file)).result(binding)
+        new_file.write ERB.new(File.read(linkable)).result(binding)
       end
     else
       `ln -s "$PWD/#{linkable}" "#{target}"`
