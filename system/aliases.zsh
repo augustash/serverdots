@@ -1,5 +1,5 @@
 # colorful listing
-alias ls="ls -F --color"
-alias l="ls -lAh --color"
-alias ll="ls -lh --color"
-alias la="ls -A --color"
+alias ls="ls -F"
+alias l="ls -lAh"
+alias ll="ls -lh"
+alias la="ls -A"
