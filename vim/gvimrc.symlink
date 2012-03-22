@@ -1,58 +1,27 @@
-" -----------------------------------------------------------
-"  GRAPHICAL
-" -----------------------------------------------------------
-"
-winpos 0 0
+" Graphical Vim config
 
-set gfn=DejaVu\ Sans\ Mono:h13
-set anti               " antialiasing
-set guioptions=gemc
-"set guioptions=aAce
-"set guioptions-=T " hide toolbar
-set columns=100
-set lines=61
-set ch=4
-set guifont=Inconsolata:h13
-set transparency=8
+set encoding=utf-8
+set guioptions-=T           " hide the toolbar
+set guioptions-=r           " hide the scrollbars
+set guioptions-=R           " hide the scrollbars with vertical split
+set guioptions-=l           " hide the scrollbars
+set guioptions-=L           " hide the scrollbars with vertical split
+set guifont=Inconsolata:h15
+set lines=40 columns=85     " window dimensions
+set number                  " line numbers
 
-" puts external commands through a pipe instead of a pseudo-tty:
-" set noguipty
+colorscheme solarized
 
-" put the * register on the system clipboard
-set clipboard+=unnamed
+set colorcolumn=81
 
-" set color scheme
-colorscheme vividchalk
+" Map keys for auto-sizing windows
+nmap <leader>1 :set columns=85<CR><C-w>o
+nmap <leader>2 <C-w>o:set columns=171<CR><C-w>v
+nmap <leader>3 <C-w>o:set columns=117<CR><leader>d<C-l>
 
-" -----------------------------------------------------------
-"  TABS
-" -----------------------------------------------------------
-"
-set guitablabel=%N\ %t\ %m
+function! TallWindow()
+    set lines=58
+endfunction
+command! Tw :call TallWindow()
+command! TallWindow :call TallWindow()
 
-" C-TAB and C-SHIFT-TAB cycle tabs forward and backward
-nmap <c-tab> :tabnext<cr>
-imap <c-tab> <c-o>:tabnext<cr>
-vmap <c-tab> <c-o>:tabnext<cr>
-nmap <c-s-tab> :tabprevious<cr>
-imap <c-s-tab> <c-o>:tabprevious<cr>
-vmap <c-s-tab> <c-o>:tabprevious<cr>
-
-" C-# switches to tab
-nmap <d-1> 1gt
-nmap <d-2> 2gt
-nmap <d-3> 3gt
-nmap <d-4> 4gt
-nmap <d-5> 5gt
-nmap <d-6> 6gt
-nmap <d-7> 7gt
-nmap <d-8> 8gt
-nmap <d-9> 9gt
-
-" -----------------------------------------------------------
-"  Highlight Trailing Whitespace
-" -----------------------------------------------------------
-"
-highlight SpecialKey    guifg=#222222 guibg=#000000
-highlight StatusLineNC  guifg=#444444 guibg=#222222
-highlight StatusLine    guifg=#AAAACC guibg=#222222
