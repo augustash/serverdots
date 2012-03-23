@@ -31,3 +31,6 @@ source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
 path=($HOME/.bin $HOME/.rvm/bin /usr/local/bin /usr/local/sbin $path)
+
+# Solarized directory colors
+#eval `dircolors ~/.dircolors`
