@@ -27,7 +27,7 @@
     branch = auto
     interactive = auto
 [core]
-    excludesfile = ~/.gitignore
+    excludesfile = ~/.cvsignore
     editor = mate -w
     pager = less -FRSX
 [apply]
