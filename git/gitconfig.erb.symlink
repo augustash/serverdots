@@ -1,5 +1,3 @@
-# Sample gitconfig
-#
 # This is a sample gitconfig. Usually we keep a lot of sensitive information
 # here (things like authentication tokens, email addresses, and so on), so this
 # file is ignored in this project's .gitignore.
@@ -8,32 +6,36 @@
 # install this to the correct location by running the project's main `rake`
 # task.
 [user]
-        name = <%= print("Your Name: "); STDOUT.flush; STDIN.gets.chomp %>
-        email = <%= print("Your Email: "); STDOUT.flush; STDIN.gets.chomp %>
+    name = <%= print("Your Name: "); STDOUT.flush; STDIN.gets.chomp %>
+    email = <%= print("Your Email: "); STDOUT.flush; STDIN.gets.chomp %>
 [alias]
-        co = checkout
-        st = status
-        br = branch
-        ci = commit
-        w = whatchanged
-        df = diff
-        unstage = reset HEAD
-        promote = !$ZSH/bin/git-promote
-        wtf     = !$ZSH/bin/git-wtf
-        count   = !git shortlog -sn
-        rank-contributers = !$ZSH/bin/git-rank-contributers
+    co = checkout
+    st = status
+    br = branch
+    ci = commit
+    w = whatchanged
+    df = diff
+    unstage = reset HEAD
+    promote = !$ZSH/bin/git-promote
+    wtf     = !$ZSH/bin/git-wtf
+    count   = !git shortlog -sn
+    rank-contributers = !$ZSH/bin/git-rank-contributers
 [color]
-        diff = auto
-        status = auto
-        branch = auto
-        interactive = auto
+    ui = auto
+    diff = auto
+    status = auto
+    branch = auto
+    interactive = auto
 [core]
-        excludesfile = ~/.gitignore
-        editor = mate -w
-        pager = less -FRSX
+    excludesfile = ~/.gitignore
+    editor = mate -w
+    pager = less -FRSX
 [apply]
-        whitespace = nowarn
+    whitespace = nowarn
 [format]
-        pretty = %C(yellow)%h%Creset %s %C(red)(%cr)%Creset
+    pretty = %C(yellow)%h%Creset %s %C(red)(%cr)%Creset
 [mergetool]
-        keepBackup = false
+    keepBackup = false
+[diff]
+    renames = copies
+    mnemonicprefix = true
