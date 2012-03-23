@@ -28,7 +28,7 @@ set softtabstop=4
 set expandtab
 
 " Right margin to use when wrapping text
-set textwidth=72
+"set textwidth=72
 
 " Enable incremental search
 set incsearch
