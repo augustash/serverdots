@@ -13,7 +13,7 @@ class Object
   def local_methods(obj = self)
     (obj.methods - obj.class.superclass.instance_methods).sort
   end
-  
+
   def ls(obj=self)
     width = `stty size 2>/dev/null`.split(/\s+/, 2).last.to_i
     width = 80 if width == 0
@@ -22,7 +22,7 @@ class Object
       puts pattern % meths
     end
   end
-  
+
   # print documentation
   #
   #   ri 'Array#pop'
