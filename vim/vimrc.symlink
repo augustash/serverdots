@@ -137,7 +137,7 @@ nmap <Space> <PageDown>
 " Colors
 syntax enable
 let g:solarized_termtrans=1
-set colorcolumn=81
+"set colorcolumn=81
 colorscheme solarized
 
 if has("gui_running")
