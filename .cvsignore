@@ -1,0 +1,11 @@
+.DS_Store
+.svn
+._*
+*~
+*.swp
+*.pyc
+.project
+.projectOptions
+.settings
+.buildpath
+nbproject

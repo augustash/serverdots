@@ -1,0 +1,34 @@
+[user]
+    name  = System Administrator
+    email = sysadmin@augustash.com
+[alias]
+    co = checkout
+    st = status
+    br = branch
+    ci = commit
+    w = whatchanged
+    df = diff
+    unstage = reset HEAD
+    count   = !git shortlog -sn
+    l = log --pretty=oneline -n 20 --graph --abbrev-commit
+    d = !"git diff-index --quiet HEAD -- || clear; git --no-pager diff --patch-with-stat"
+[color]
+    ui = auto
+    diff = auto
+    status = auto
+    branch = auto
+    interactive = auto
+[core]
+    excludesfile = ~/.cvsignore
+    editor = mate -w
+    pager = less -FRSX
+    whitespace = space-before-tab,indent-with-non-tab,trailing-space
+[apply]
+    whitespace = fix
+[format]
+    pretty = %C(yellow)%h%Creset %s %C(red)(%cr)%Creset
+[diff]
+    renames = copies
+    mnemonicprefix = true
+[push]
+    default = matching
