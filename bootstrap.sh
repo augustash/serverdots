@@ -32,14 +32,11 @@ dep() {
 
 backup() {
   mkdir -p $backupdir
-  local files=( $(ls -a) )
-  for file in "${files[@]}"; do
-    in_array $file "${excluded[@]}" || cp -Rf "$HOME/$file" "$backupdir/$file"
-  done
+  rsync --exclude-from=EXCLUDE -a $HOME $backupdir
 }
 
 install() {
-  rsync --exclude-from=EXCLUDE -av . $HOME
+  rsync --exclude-from=EXCLUDE -a . $HOME
 }
 
 #-----------------------------------------------------------------------------
