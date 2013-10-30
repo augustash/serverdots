@@ -1,0 +1,8 @@
+.git
+.gitignore
+.gitmodules
+.DS_Store
+bootstrap.sh
+EXCLUDE
+README*
+LICENSE*
