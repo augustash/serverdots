@@ -32,11 +32,11 @@ dep() {
 
 backup() {
   mkdir -p $backupdir
-  rsync --exclude-from=EXCLUDE -a $HOME $backupdir
+  rsync -az --exclude-from=EXCLUDE $HOME/ $backupdir/
 }
 
 install() {
-  rsync --exclude-from=EXCLUDE -a . $HOME
+  rsync -az --exclude-from=EXCLUDE . $HOME
 }
 
 #-----------------------------------------------------------------------------
