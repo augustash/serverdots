@@ -86,7 +86,6 @@ if [ -d $HOME/.dotfiles ]; then
   # Install
   notice "Installing"
   install
-  vim +BundleInstall +BundleUpdate +qall 2>/dev/null
 else
   # Clone Repo
   notice "Downloading"
@@ -101,7 +100,6 @@ else
   # Install
   notice "Installing"
   install
-  vim +BundleInstall +BundleUpdate +qall 2>/dev/null
 fi
 
 

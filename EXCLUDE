@@ -1,4 +1,5 @@
 .ansible
+.cache
 .git
 .gitignore
 .gitmodules
