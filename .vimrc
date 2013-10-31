@@ -1,6 +1,14 @@
-" This must be first, because it changes other options as side effect
+" Not vi-compatible
 set nocompatible
-filetype off
+
+" ----------------------------------------
+" Vundle
+" ----------------------------------------
+source .vim-bundles
+
+" ----------------------------------------
+" Settings
+" ----------------------------------------
 
 " Use UTF-8 as the default buffer encoding
 set enc=utf-8
@@ -174,38 +182,3 @@ if has("autocmd")
     " Discourages use of short tags.
     autocmd FileType php let php_noShortTags=1
 endif
-
-
-" ----------------------------------------
-" Vundle
-" ----------------------------------------
-
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
-
-" let Vundle manage Vundle, required
-Bundle 'gmarik/vundle'
-" uber awesome syntax and errors highlighter
-Bundle 'Syntastic'
-" T-H-E colorscheme
-Bundle 'altercation/vim-colors-solarized'
-" Git wrapper so awesome, it should be illegal
-Bundle 'tpope/vim-fugitive'
-" Syntax highlight Markdown
-Bundle 'Markdown'
-" Syntax highlight SASS
-Bundle 'cakebaker/scss-syntax.vim'
-" tComment
-Bundle 'tComment'
-nnoremap // :TComment<CR>
-vnoremap // :TComment<CR>
-" UI Additions
-Bundle 'nathanaelkane/vim-indent-guides'
-Bundle 'bling/vim-airline'
-Bundle 'jszakmeister/vim-togglecursor'
-" Ruby
-Bundle 'vim-ruby/vim-ruby'
-Bundle 'tpope/vim-haml'
-" JavaScript
-Bundle 'pangloss/vim-javascript'
-Bundle 'kchmck/vim-coffee-script'

@@ -9,3 +9,4 @@
 .settings
 .buildpath
 nbproject
+.vim/bundle/
