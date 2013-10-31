@@ -2,6 +2,18 @@
 # Functions
 #
 
+# Checks a boolean variable for "true".
+# Case insensitive: "1", "y", "yes", "t", "true", "o", and "on".
+function is-true {
+  [[ -n "$1" && "$1" == (1|[Yy]([Ee][Ss]|)|[Tt]([Rr][Uu][Ee]|)|[Oo]([Nn]|)) ]]
+}
+
+# Checks a name if it is a command, function, or alias.
+function is-callable {
+  (( $+commands[$1] )) || (( $+functions[$1] )) || (( $+aliases[$1] ))
+}
+
+# Misc.
 function ips {
   ifconfig | grep "inet " | awk '{ print $2 }'
 }

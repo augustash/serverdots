@@ -75,7 +75,7 @@ if [ -d $HOME/.dotfiles ]; then
 
   # Update Repo
   notice "Updating"
-  git pull origin master
+  git pull origin facelift
   git submodule init
   git submodule update
 
