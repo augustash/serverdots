@@ -4,7 +4,7 @@ set nocompatible
 " ----------------------------------------
 " Vundle
 " ----------------------------------------
-source .vim-bundles
+source $HOME/.vim-bundles
 
 " ----------------------------------------
 " Settings
