@@ -1,3 +1,14 @@
+#
+# A standard filter file for rsync.
+#
+# Use it to add include/exclude patterns for the backup script. See sections
+# "FILTER RULES" and "INCLUDE/EXCLUDE PATTERN RULES" in rsync's man page for
+# more information. Patterns starting with / are anchored like with ^ in
+# regular expressions.
+#
+# Usage: rsync --filter="merge /path/to/this/file".
+#
+
 - .ansible
 - .cache
 - .git/
@@ -10,3 +21,5 @@
 - EXCLUDE
 - README*
 - LICENSE*
+
+# EOF
