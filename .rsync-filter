@@ -12,7 +12,8 @@
 - .ansible
 - .cache
 - .git/
-- .git*
+- .gitignore
+- .gitmodules
 -,p .DS_Store
 - .dotfiles
 - .dotfiles-bak
