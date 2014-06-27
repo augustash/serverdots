@@ -1,0 +1,12 @@
+- .ansible
+- .cache
+- .git/
+- .git*
+-,p .DS_Store
+- .dotfiles
+- .dotfiles-bak
+- .rsync-filter
+- bootstrap.sh
+- EXCLUDE
+- README*
+- LICENSE*
