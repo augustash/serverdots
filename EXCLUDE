@@ -6,6 +6,7 @@
 .DS_Store
 .dotfiles
 .dotfiles-bak
+.osx
 bootstrap.sh
 EXCLUDE
 README*
