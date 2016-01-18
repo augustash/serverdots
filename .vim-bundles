@@ -1,0 +1,71 @@
+"" Vundle plugin manager
+"" http://www.erikzaadi.com/2012/03/19/auto-installing-vundle-from-your-vimrc/
+let has_vundle=1
+if !filereadable($HOME."/.vim/bundle/vundle/README.md")
+    echo 'Installing Vundle...'
+    echo ''
+    silent !mkdir -p $HOME/.vim/bundle
+    silent !git clone https://github.com/VundleVim/Vundle.vim.git $HOME/.vim/bundle/Vundle.vim
+    let has_vundle=0
+endif
+
+"" Initialize Vundle
+filetype off
+set rtp+=$HOME/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+"" Vundle can manage Vundle
+Plugin 'VundleVim/Vundle.vim'
+
+"" T-H-E colorscheme
+Plugin 'altercation/vim-colors-solarized'
+
+"" Easy... motions... yeah.
+Plugin 'Lokaltog/vim-easymotion'
+
+"" Edit files using sudo/su
+Plugin 'chrisbra/SudoEdit.vim'
+
+"" Awesome syntax and errors highlighter
+"" REQUIREMENTS: See :h Syntastic
+Plugin 'scrooloose/syntastic'
+
+"" Version Control
+Plugin 'airblade/vim-gitgutter'
+
+"" Syntax highlight
+Plugin 'plasticboy/vim-markdown'
+Plugin 'cakebaker/scss-syntax.vim'
+
+"" UI Additions
+Plugin 'nathanaelkane/vim-indent-guides'
+Plugin 'bling/vim-airline'
+Plugin 'jszakmeister/vim-togglecursor'
+
+"" Autoclose (, etc
+Plugin 'Townk/vim-autoclose'
+
+"" Align your = etc.
+Plugin 'vim-scripts/Align'
+
+"" PHP Development
+Plugin 'StanAngeloff/php.vim'
+
+"" Ruby
+Plugin 'vim-ruby/vim-ruby'
+
+"" JavaScript
+Plugin 'pangloss/vim-javascript'
+Plugin 'kchmck/vim-coffee-script'
+
+call vundle#end()
+
+"" Installing plguins the first time
+if has_vundle == 0
+  echo 'Installing Bundles, please ignore key map error messages'
+  echo ''
+  :PluginInstall
+endif
+
+"" required!
+filetype plugin indent on

@@ -1,0 +1,102 @@
+[user]
+    name  = System Administrator
+    email = sysadmin@augustash.com
+
+[filter "lfs"]
+    clean = git lfs clean %f
+    smudge = git lfs smudge %f
+    required = true
+
+[alias]
+    co   = checkout
+    st   = status
+    br   = branch -av
+    ci   = commit
+    go   = "!f() { git checkout -b \"$1\" 2> /dev/null || git checkout \"$1\"; }; f"
+    tags = tag -l
+    ########
+    diff = diff --word-diff
+    dc   = diff --cached
+    df   = !"git diff-index --quiet HEAD -- || clear; git --no-pager diff --patch-with-stat"
+    # diff last commit
+    dlc  = diff --cached HEAD^
+    # diff a revision
+    dr   = "!f() { git diff "$1"^.."$1"; }; f"
+    # modified in last commit
+    dl   = "!git ll -1"
+    ########
+    sa   = stash apply
+    sc   = stash clear
+    sd   = stash drop
+    sl   = stash list
+    sp   = stash pop
+    ss   = stash save
+    sw   = stash show
+    ########
+    l    = log --pretty=oneline -n 20 --graph --abbrev-commit
+    ls   = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate
+    ll   = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --numstat
+    ld   = log --pretty=format:"%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --date=relative
+    fl   = log -u
+    ########
+    amend   = !git log -n 1 --pretty=tformat:%s%n%n%b | git commit -F - --amend
+    count   = !git shortlog -sn
+    human   = name-rev --name-only --refs=refs/heads/*
+    retag   = "!r() { git tag -d $1 && git push origin :refs/tags/$1 && git tag $1; }; r"
+    root    = rev-parse --show-toplevel
+    this    = !git init && git add . && git commit -m \"Initial commit.\"
+    trim    = !git reflog expire --expire=now --all && git gc --prune=now
+    unstage = reset HEAD --
+
+[color]
+    ui = true
+
+[color "branch"]
+    current = yellow reverse
+    local = yellow
+    remote = green
+
+[color "diff"]
+    meta = yellow bold
+    frag = magenta bold
+    old = red bold
+    new = green bold
+
+[color "status"]
+    added = green
+    changed = yellow
+    untracked = red
+
+[core]
+    editor = GIT_EDITOR
+    excludesfile = ~/.cvsignore
+    autocrlf = input
+    compression = 9
+    filemode = false
+    pager = less -FRSX
+
+    # Treat spaces before tabs and all kinds of trailing whitespace as an error
+    # [default] trailing-space: looks for spaces at the end of a line
+    # [default] space-before-tab: looks for spaces before tabs at the beginning of a line
+    whitespace = space-before-tab,-indent-with-non-tab,trailing-space
+
+    # Make `git rebase` safer on OS X
+    # More info: <http://www.git-tower.com/blog/make-git-rebase-safe-on-osx/>
+    trustctime = false
+
+    # Prevent showing files whose names contain non-ASCII symbols as unversioned.
+    # http://michael-kuehnel.de/git/2014/11/21/git-mac-osx-and-german-umlaute.html
+    precomposeunicode = false
+
+[apply]
+    whitespace = fix
+
+[push]
+    default = simple
+
+[format]
+    pretty = %C(yellow)%h%Creset %s %C(red)(%cr)%Creset
+
+[diff]
+    mnemonicprefix = true
+    renames = copies

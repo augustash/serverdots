@@ -1,0 +1,12 @@
+.ansible
+.cache
+.git
+.gitignore
+.gitmodules
+.DS_Store
+.dotfiles
+.dotfiles-bak
+bootstrap.sh
+EXCLUDE
+README*
+LICENSE*
