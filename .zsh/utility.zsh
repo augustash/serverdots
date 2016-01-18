@@ -1,7 +1,3 @@
-#
-# Defines general aliases and functions.
-#
-
 # Correct commands.
 setopt CORRECT
 
@@ -53,6 +49,3 @@ else
 
   alias ls='ls -G'
 fi
-
-# Serves a directory via HTTP.
-alias http-serve='python -m SimpleHTTPServer'

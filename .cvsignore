@@ -1,12 +1,63 @@
-.DS_Store
-.svn
-._*
-*~
-*.swp
-*.pyc
+# Application Meta #
+####################
+*.sublime-project
+*.sublime-workspace
 .project
 .projectOptions
 .settings
 .buildpath
-nbproject
+.idea
+.phpstorm.meta.php
 .vim/bundle/
+.tags
+.tags_sorted_by_file
+nbproject/
+sftp-config.json
+
+# Compiled source #
+###################
+*.com
+*.class
+*.dll
+*.exe
+*.o
+*.so
+*.pyc
+
+# Temporary files #
+###################
+*.swp
+*.swo
+*~
+._*
+
+# Packages #
+############
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.tar.gz
+*.zip
+
+# Other VCS #
+#############
+.svn/
+
+# Logs and databases #
+######################
+*.log
+*.sql
+*.sqlite
+
+# OS generated files #
+######################
+.DS_Store*
+Icon?
+Thumbs.db
+.Spotlight-V100
+.Trashes
+Desktop.ini

@@ -5,62 +5,66 @@ if !filereadable($HOME."/.vim/bundle/vundle/README.md")
     echo 'Installing Vundle...'
     echo ''
     silent !mkdir -p $HOME/.vim/bundle
-    silent !git clone https://github.com/gmarik/vundle $HOME/.vim/bundle/vundle
+    silent !git clone https://github.com/VundleVim/Vundle.vim.git $HOME/.vim/bundle/Vundle.vim
     let has_vundle=0
 endif
 
 "" Initialize Vundle
 filetype off
-set rtp+=$HOME/.vim/bundle/vundle/
-call vundle#rc()
+set rtp+=$HOME/.vim/bundle/Vundle.vim
+call vundle#begin()
 
 "" Vundle can manage Vundle
-Bundle 'gmarik/vundle'
+Plugin 'VundleVim/Vundle.vim'
 
 "" T-H-E colorscheme
-Bundle 'altercation/vim-colors-solarized'
+Plugin 'altercation/vim-colors-solarized'
 
 "" Easy... motions... yeah.
-Bundle 'Lokaltog/vim-easymotion'
+Plugin 'Lokaltog/vim-easymotion'
 
 "" Edit files using sudo/su
-Bundle 'chrisbra/SudoEdit.vim'
-
-"" Super easy commenting, toggle comments etc
-Bundle 'scrooloose/nerdcommenter'
+Plugin 'chrisbra/SudoEdit.vim'
 
 "" Awesome syntax and errors highlighter
 "" REQUIREMENTS: See :h Syntastic
-Bundle 'scrooloose/syntastic'
+Plugin 'scrooloose/syntastic'
+
+"" Version Control
+Plugin 'airblade/vim-gitgutter'
 
 "" Syntax highlight
-Bundle 'plasticboy/vim-markdown'
-Bundle 'cakebaker/scss-syntax.vim'
+Plugin 'plasticboy/vim-markdown'
+Plugin 'cakebaker/scss-syntax.vim'
 
 "" UI Additions
-Bundle 'nathanaelkane/vim-indent-guides'
-Bundle 'bling/vim-airline'
-Bundle 'jszakmeister/vim-togglecursor'
+Plugin 'nathanaelkane/vim-indent-guides'
+Plugin 'bling/vim-airline'
+Plugin 'jszakmeister/vim-togglecursor'
 
 "" Autoclose (, etc
-Bundle 'Townk/vim-autoclose'
+Plugin 'Townk/vim-autoclose'
 
 "" Align your = etc.
-Bundle 'vim-scripts/Align'
+Plugin 'vim-scripts/Align'
+
+"" PHP Development
+Plugin 'StanAngeloff/php.vim'
 
 "" Ruby
-Bundle 'vim-ruby/vim-ruby'
-Bundle 'tpope/vim-haml'
+Plugin 'vim-ruby/vim-ruby'
 
 "" JavaScript
-Bundle 'pangloss/vim-javascript'
-Bundle 'kchmck/vim-coffee-script'
+Plugin 'pangloss/vim-javascript'
+Plugin 'kchmck/vim-coffee-script'
+
+call vundle#end()
 
 "" Installing plguins the first time
 if has_vundle == 0
-    echo 'Installing Bundles, please ignore key map error messages'
-    echo ''
-    :BundleInstall
+  echo 'Installing Bundles, please ignore key map error messages'
+  echo ''
+  :PluginInstall
 endif
 
 "" required!

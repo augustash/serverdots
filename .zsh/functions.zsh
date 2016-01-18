@@ -1,7 +1,3 @@
-#
-# Functions
-#
-
 # Checks a boolean variable for "true".
 # Case insensitive: "1", "y", "yes", "t", "true", "o", and "on".
 function is-true {
@@ -23,8 +19,13 @@ function down4me() {
 }
 
 function myip {
-  res=$(curl -s checkip.dyndns.org | grep -Eo '[0-9\.]+')
+  res=$(curl -s jsonip.com | grep -Eo '[0-9\.]+')
   echo -e "Your public IP is: ${echo_bold_green} $res ${echo_normal}"
+}
+
+# Search through history
+function h() {
+  if [ -z "$*" ]; then history 1; else history 1 | egrep "$@"; fi
 }
 
 # Search through directory contents with grep
@@ -60,4 +61,12 @@ function find-exec {
 # Displays user owned processes status.
 function psu {
   ps -U "${1:-$USER}" -o 'pid,%cpu,%mem,command' "${(@)argv[2,-1]}"
+}
+
+function memcpu() {
+    echo "\n*** Top 10 CPU eating processes ***";
+    ps auxc | sort -nr -k 3 | head -10;
+    echo "\n";
+    echo "*** TOP 10 memory eating processes ***";
+    ps auxc | sort -nr -k 4 | head -10;
 }

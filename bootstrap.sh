@@ -89,7 +89,7 @@ if [ -d $HOME/.dotfiles ]; then
 else
   # Clone Repo
   notice "Downloading"
-  git clone -b facelift --recursive git://github.com/augustash/serverdots.git $HOME/.dotfiles
+  git clone --recursive git://github.com/augustash/serverdots.git $HOME/.dotfiles
 
   pushd $HOME/.dotfiles
 

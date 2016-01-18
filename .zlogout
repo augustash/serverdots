@@ -1,3 +1,1 @@
-#
 # Executes commands at logout.
-#

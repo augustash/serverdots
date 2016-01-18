@@ -14,7 +14,7 @@
 - .git/
 - .gitignore
 - .gitmodules
--,p .DS_Store
+- .DS_Store
 - .dotfiles
 - .dotfiles-bak
 - .rsync-filter

@@ -14,6 +14,7 @@ alias fixpermd='find . -type d -exec chmod 755 {} \;'
 alias fixpermf='find . -type f -exec chmod 644 {} \;'
 alias nsopen='netstat -lptu'
 alias grep="grep -i $GREP_OPTIONS"
+alias ssh='ssh -o ServerAliveInterval=60'
 
 # directory listing
 alias l='ls -lAh'         # Lists in one column, hidden files.
@@ -39,6 +40,7 @@ fi
 alias df='df -kh'
 alias du='du -kh'
 alias free='free -m'
+alias phpsize="ps --no-headers -o \"rss,cmd\" -C php-fpm | awk '{ sum+=$1 } END { printf (\"%d%s\n\", sum/NR/1024,\"M\") }'"
 
 if (( $+commands[htop] )); then
   alias top=htop

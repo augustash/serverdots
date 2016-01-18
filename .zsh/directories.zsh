@@ -1,7 +1,4 @@
-#
 # Sets additional directory options and defines directory aliases.
-#
-
 setopt AUTO_CD              # Auto changes to a directory without typing cd.
 setopt PUSHD_SILENT         # Do not print the directory stack after pushd or popd.
 setopt PUSHD_TO_HOME        # Push to home directory when no argument is given.
