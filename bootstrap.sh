@@ -75,7 +75,7 @@ if [ -d $HOME/.dotfiles ]; then
 
   # Update Repo
   notice "Updating"
-  git pull origin facelift
+  git pull origin master
   git submodule init
   git submodule update
 
@@ -89,7 +89,7 @@ if [ -d $HOME/.dotfiles ]; then
 else
   # Clone Repo
   notice "Downloading"
-  git clone --recursive git://github.com/augustash/serverdots.git $HOME/.dotfiles
+  git clone --recursive -b master git://github.com/augustash/serverdots.git $HOME/.dotfiles
 
   pushd $HOME/.dotfiles
 
