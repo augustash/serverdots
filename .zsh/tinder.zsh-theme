@@ -2,7 +2,7 @@ PROMPT='
 $(user_name) at $(box_name) in $(directory_name) $(git_prompt_info)$(git_prompt_status)
 $(prompt_caret)%{$reset_color%} '
 
-RPROMPT='$(ruby_prompt_info)'
+RPROMPT=''
 
 ZSH_THEME_GIT_PROMPT_PREFIX="on "
 ZSH_THEME_GIT_PROMPT_SUFFIX="%{$reset_color%}"
